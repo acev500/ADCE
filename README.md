@@ -4,6 +4,14 @@
 
 全中文界面 · 纯本地运行 · 基于开源引擎（Real-ESRGAN / Real-CUGAN / RIFE / FFmpeg）
 
+[![GitHub stars](https://img.shields.io/github/stars/acev500/ADCE?style=social)](https://github.com/acev500/ADCE)
+[![GitHub last commit](https://img.shields.io/github/last-commit/acev500/ADCE)](https://github.com/acev500/ADCE/commits/main)
+[![License](https://img.shields.io/badge/license-MIT%20%2B%20third--party-blue)](https://github.com/acev500/ADCE)
+
+<img src="qrcode.png" width="150" align="right" alt="扫码打开仓库">
+
+觉得有用就点个 ⭐ —— 手机扫右边这个码也能直接打开。
+
 ![界面](界面截图.png)
 
 ---
