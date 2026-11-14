@@ -16,6 +16,26 @@
 
 ---
 
+## 下载
+
+**Windows 用户直接用安装包（推荐）**
+
+[![Download](https://img.shields.io/badge/download-安装包%20v1.2-2ea44f?style=for-the-badge)](https://github.com/acev500/ADCE/releases/latest)
+
+双击安装包 → 选择目录 → 自动创建桌面快捷方式。不用装 Python，不用配环境，引擎和模型都在包里。
+
+```
+文件     Chaofenbian-v1.2-Setup.exe
+大小     321 MB
+SHA256   4F1489006772205D2C75AF122C3A389205DA27A8BFF6030003F7656CA337984F
+```
+
+安装包内容：两个程序（图形版 + 命令行版）、全部引擎与模型、四套调色 LUT、中文说明。
+
+> 想自己编译或只拿源码，继续往下看。
+
+---
+
 ## 功能
 
 | 功能 | 说明 |
