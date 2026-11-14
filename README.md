@@ -1,38 +1,108 @@
 # 超分辨（Chaofenbian）
 
-视频超分 + 补帧 + 图片超分，一个 Windows 下开箱即用的图形/命令行工具。
-
-全中文界面 · 纯本地运行 · 基于开源引擎（Real-ESRGAN / Real-CUGAN / RIFE / FFmpeg）
+视频超分 + 补帧 + 图片超分，Windows 下开箱即用，全中文界面，纯本地运行。
 
 [![GitHub stars](https://img.shields.io/github/stars/acev500/ADCE?style=social)](https://github.com/acev500/ADCE)
-[![GitHub last commit](https://img.shields.io/github/last-commit/acev500/ADCE)](https://github.com/acev500/ADCE/commits/main)
 [![License](https://img.shields.io/badge/license-MIT%20%2B%20third--party-blue)](https://github.com/acev500/ADCE)
-
-<img src="qrcode.png" width="150" align="right" alt="扫码打开仓库">
-
-觉得有用就点个 ⭐ —— 手机扫右边这个码也能直接打开。
-
-![界面](界面截图.png)
 
 ---
 
-## 下载
+# 🔽 下载安装
 
-**Windows 用户直接用安装包（推荐）**
+## 不会技术的，照着下面四步做
 
-[![Download](https://img.shields.io/badge/download-安装包%20v1.2-2ea44f?style=for-the-badge)](https://github.com/acev500/ADCE/releases/latest)
+### 第 1 步 · 点这个链接下载
 
-双击安装包 → 选择目录 → 自动创建桌面快捷方式。不用装 Python，不用配环境，引擎和模型都在包里。
+### 👉 **[点我下载安装包](https://github.com/acev500/ADCE/releases/latest)**
+
+打开后是一个英文页面，找文件名 **`Chaofenbian-v1.2-Setup.exe`**，点它。
 
 ```
-文件     Chaofenbian-v1.2-Setup.exe
-大小     321 MB
-SHA256   4F1489006772205D2C75AF122C3A389205DA27A8BFF6030003F7656CA337984F
+文件大小   321 MB
+下载耗时   视网速而定，慢的话十几分钟
 ```
 
-安装包内容：两个程序（图形版 + 命令行版）、全部引擎与模型、四套调色 LUT、中文说明。
+### 第 2 步 · 双击那个 exe
 
-> 想自己编译或只拿源码，继续往下看。
+Windows 可能会弹出蓝色的「Windows 已保护你的电脑」：
+
+```
+点「更多信息」→ 点「仍要运行」
+```
+
+这不是病毒，是因为个人开发者买不起代码签名证书（一年几千块），所有没签名的程序都会这么提示。
+
+### 第 3 步 · 选个安装位置
+
+弹窗里选一个文件夹，**建议装在 D 盘**，比如 `D:\超分辨`。点确定。
+
+等一两分钟，进度条走完会弹出一个黑色的窗口，让它自己跑完。
+
+### 第 4 步 · 装好了，桌面上多了两个图标
+
+```
+超分辨              双击打开，把视频或图片拖进窗口
+超分辨 命令行        把文件拖到图标上，直接开始处理
+```
+
+处理完的结果在**安装目录下的「输出」文件夹**里。
+
+---
+
+## 安装包里有什么
+
+```
+超分辨_图形版.exe     图形界面
+超分辨.exe            命令行版（支持 --quiet / --json）
+bin\                  Real-ESRGAN、Real-CUGAN、RIFE、FFmpeg 与全部模型
+lut\                  四套调色 LUT（灰黑重工业 / 冷蓝档案 / 暖橙工业 / 阴天纪实）
+使用说明.txt           中文手册
+```
+
+解压后约 554 MB，装完可以删掉那个安装包。
+
+## 校验（不放心的话可以核对）
+
+```
+SHA256 4F1489006772205D2C75AF122C3A389205DA27A8BFF6030003F7656CA337984F
+```
+
+在 PowerShell 里跑：
+
+```powershell
+Get-FileHash .\Chaofenbian-v1.2-Setup.exe -Algorithm SHA256
+```
+
+两个值一样就说明文件没被篡改。
+
+---
+
+## 系统要求
+
+| 项目 | 要求 |
+|---|---|
+| 系统 | Windows 10 / 11（64 位） |
+| NVIDIA | GTX 600 系列及以后 |
+| AMD | HD 7000 / GCN 架构及以后 |
+| Intel | HD 4000 核显及以后 |
+| 纯 CPU | **不支持**（引擎依赖 Vulkan，必须用显卡） |
+
+需要安装对应显卡的最新驱动。嵌入式设备（如 ESP32、树莓派）不适用。
+
+---
+
+## 从源码运行（给会用命令行的）
+
+```bash
+git clone https://github.com/acev500/ADCE.git
+cd ADCE
+```
+
+然后按下面的「快速开始」准备 `bin\` 目录。
+
+---
+
+![界面](界面截图.png)
 
 ---
 
