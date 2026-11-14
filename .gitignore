@@ -1,0 +1,38 @@
+# 引擎与模型（500 MB 以上，自己下，见 README）
+bin/
+
+# 运行时产物
+work/
+输出/
+日志/
+config.json
+
+# 备份与打包临时
+_备份/
+_build*/
+*.spec
+build/
+dist/
+
+# 可执行文件（用 Release 分发，不进仓库）
+*.exe
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# 测试与调试产物
+_headless_test/
+_ui_*.png
+_test_imgs/
+
+# 系统文件
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# 旧备份与测试图
+_zs2/
+_备用/
+*.zip
